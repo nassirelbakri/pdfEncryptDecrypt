@@ -1,12 +1,12 @@
 #! python3
-# this program walk through a folder and encrypt all PDF files 
-# and save them with _encrypted suffix
+# this program walk through a folder and decrypt all PDF files 
+# remove _encrypted.pdf and save them with _decrypted.pdf suffix
 
 import sys, os, PyPDF2
 from pathlib import Path
 
-folder= 'C:/users/nassi/encryptedPDF' #sys.argv[1]
-password= 'swordfish'#sys.argv[2]
+folder= sys.argv[1]
+password= sys.argv[2]
 
 folder=Path(folder)
 
