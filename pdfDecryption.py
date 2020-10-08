@@ -17,6 +17,7 @@ for foldername, subfolders, filenames in os.walk(folder):
             filePath=foldername/filename
             pdfObj=open(filePath,'rb')
             pdfReader=PyPDF2.PdfFileReader(pdfObj)
+            #Check if password is correct
             if pdfReader.decrypt(str(password))==0:
                 print(f'incorrect password for file %s'%filePath)
                 continue
